@@ -97,12 +97,12 @@
 		ol {
 			display:flex;
 			align-items:center;
-			gap: .4rem;
+			gap: .6rem;
 			li {
 				display:flex;
 				align-items:center;
-				gap: .4rem;
-				color:#999;
+				gap: .6rem;
+				color:var(--gray-400);
 				& ~ li {
 					&::before {
 						content:'';
@@ -113,19 +113,19 @@
 						background-size:.8rem;
 						opacity:.2;
 					}
-					&:last-child {
-						color:var(--gray-600);
-					}
 				}
 				&.home {
 					a {
-						display:block;
-						overflow:hidden;
-						width:1.8rem;
-						height:1.8rem;
-						background:url(../images/ico/ico_home_b.png) no-repeat 50%;
-						background-size:1.4rem;
-						text-indent:-5000em;
+						display:flex;
+						gap:.2rem;
+						color:var(--gray-900);
+						&::before {
+							content:'';
+							width:1.8rem;
+							height:1.8rem;
+							background:url(../images/ico/ico_home_b.png) no-repeat 50%;
+							background-size:1.4rem;
+						}
 					}
 				}
 			}
@@ -289,9 +289,10 @@
 				> div {
 					display:flex;
 					position:relative;
+					padding-right:.8rem;
 					a {
 						display:block;
-						padding:0 .8rem 0 1.6rem;
+						padding:0 .8rem;
 						font-size:1.4rem;
 						line-height:4.5rem;
 						color:var(--gray-600);
