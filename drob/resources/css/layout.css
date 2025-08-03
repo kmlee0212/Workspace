@@ -30,7 +30,7 @@
 				background-size:1.8rem;
 				text-align:center;
 				transition:all .3s;
-				&:hover {
+				&:not(:focus):hover {
 					background-color:#fff;
 					border-radius:50%;
 				}
@@ -63,7 +63,7 @@
 				background:url(../images/ico/ico_setup_b.png) no-repeat 50%;
 				background-size:2rem;
 				transition:all .3s;
-				&:hover {
+				&:not(:focus):hover {
 					background-color:#fff;
 					border-radius:50%;
 				}
@@ -79,7 +79,7 @@
 					background-size:2rem;
 					transition:all .3s;
 				}
-				&:hover {
+				&:not(:focus):hover {
 					&::before {
 						background-color:var(--blue-900);
 						background-image:url(../images/ico/ico_person_w.png);
@@ -204,7 +204,7 @@
 					position:relative;
 					padding:1.6rem 1.2rem;
 					color:var(--blue-100);
-					&:hover {
+					&:not(:focus):hover {
 						color:var(--white);
 					}
 					&::after {
@@ -291,7 +291,7 @@
 				line-height:4.4rem;
 				color:var(--gray-600);
 				white-space:nowrap;
-				&:hover {
+				&:not(:focus):hover {
 					color:var(--blue-600);
 				}
 			}
@@ -327,7 +327,7 @@
 						background:url(../images/ico/ico_close_b.png) no-repeat 50%;
 						background-size:1.2rem;
 					}
-					&:hover {
+					&:not(:focus):hover {
 						opacity:1;
 					}
 				}
