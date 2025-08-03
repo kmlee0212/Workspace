@@ -214,7 +214,7 @@
 						top:50%;
 						margin-top:-.2rem;
 						padding:.3rem;
-						border:solid #fff;
+						border:solid var(--blue-100);
 						border-width:0 .2rem .2rem 0;
 						transform:rotate(45deg);
 					}
@@ -225,6 +225,8 @@
 					button {
 						color:var(--white);
 						&::after {
+							border:solid var(--white);
+							border-width:0 .2rem .2rem 0;
 							transform:rotate(225deg);
 						}
 					}
