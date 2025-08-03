@@ -223,7 +223,7 @@
 			&.on {
 				h2 {
 					button {
-						color:var(--blue-100);
+						color:var(--white);
 						&::after {
 							transform:rotate(225deg);
 						}
