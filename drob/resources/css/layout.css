@@ -272,69 +272,82 @@
 .main-tabs, .sub-tabs {
 	overflow-x:auto;
 	overflow-y:hidden;
-	position:relative;
-	height:4.5rem;
 	border-bottom:1px solid #e6e9ed;
-	ul {
-		display:flex;
-		align-items:center;
-		position:absolute;
-		left:0;
-		right:0;
-		top:0;
-		padding:0 1.6rem;
-		li {
+	.inner {
+		position:relative;
+		height:4.5rem;
+		ul {
 			display:flex;
-			position:relative;
-			a {
-				display:block;
-				padding:0 .8rem 0 1.6rem;
-				font-size:1.4rem;
-				line-height:4.4rem;
-				color:var(--gray-600);
-				white-space:nowrap;
-				&:not(:focus):hover {
-					color:var(--blue-600);
+			align-items:center;
+			position:absolute;
+			left:0;
+			top:0;
+			width:100%;
+			height:100%;
+			padding-left:1.6rem;
+			li {
+				&:last-child {
+					padding-right:1.6rem;
 				}
-			}
-			&.on {
-				&::before {
-					content:'';
-					position:absolute;
-					left:0;
-					bottom:0;
-					width:100%;
-					height:.3rem;
-					background-color:var(--blue-600);
-				}
-				a {
-					font-weight:700;
-					color:var(--blue-600);
-				}
-			}
-			.actions {
-				display:flex;
-				align-items:center;
-				gap: .2rem;
-				button {
-					width:2rem;
-					height:2rem;
-					transition:all .3s;
-					opacity:.4;
-					&.refresh {
-						background:url(../images/ico/ico_refresh_b.png) no-repeat 50%;
-						background-size:1.5rem;
+				> div {
+					display:flex;
+					position:relative;
+					a {
+						display:block;
+						padding:0 .8rem 0 1.6rem;
+						font-size:1.4rem;
+						line-height:4.5rem;
+						color:var(--gray-600);
+						white-space:nowrap;
+						&:not(:focus):hover {
+							color:var(--blue-600);
+						}
 					}
-					&.close {
-						background:url(../images/ico/ico_close_b.png) no-repeat 50%;
-						background-size:1.2rem;
+				}
+				&.on {
+					> div {
+						&::before {
+							content:'';
+							position:absolute;
+							left:0;
+							bottom:0;
+							width:100%;
+							height:.3rem;
+							background-color:var(--blue-600);
+						}
+						a {
+							font-weight:700;
+							color:var(--blue-600);
+						}
 					}
-					&:not(:focus):hover {
-						opacity:1;
+				}
+				.actions {
+					display:flex;
+					align-items:center;
+					gap: .2rem;
+					button {
+						width:2rem;
+						height:2rem;
+						transition:all .3s;
+						opacity:.4;
+						&.refresh {
+							background:url(../images/ico/ico_refresh_b.png) no-repeat 50%;
+							background-size:1.5rem;
+						}
+						&.close {
+							background:url(../images/ico/ico_close_b.png) no-repeat 50%;
+							background-size:1.2rem;
+						}
+						&:not(:focus):hover {
+							opacity:1;
+						}
 					}
 				}
 			}
 		}
+	}
+	&::-webkit-scrollbar {
+		display:none;
 	}
 }
 
