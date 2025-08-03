@@ -31,10 +31,6 @@
 				background-size:1.8rem;
 				text-align:center;
 				transition:all .3s;
-				&:not(:focus):hover {
-					background-color:#fff;
-					border-radius:50%;
-				}
 			}
 			.search {
 				display:flex;
@@ -64,28 +60,13 @@
 				background:url(../images/ico/ico_setup_b.png) no-repeat 50%;
 				background-size:2rem;
 				transition:all .3s;
-				&:not(:focus):hover {
-					background-color:#fff;
-					border-radius:50%;
-				}
 			}
 			.avatar {
-				&::before {
-					content:'';
-					display:block;
-					width:3.2rem;
-					height:3.2rem;
-					border-radius:50%;
-					background: url(../images/ico/ico_person_b.png) no-repeat 50%;
-					background-size:2.2rem;
-					transition:all .3s;
-				}
-				&:not(:focus):hover {
-					&::before {
-						background-color:var(--blue-900);
-						background-image:url(../images/ico/ico_person_w.png);
-					}
-				}
+				width:3.2rem;
+				height:3.2rem;
+				background: url(../images/ico/ico_person_b.png) no-repeat 50%;
+				background-size:2.2rem;
+				transition:all .3s;
 			}
 		}
 	}
