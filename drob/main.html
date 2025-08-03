@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title> Drob </title>
+<link rel="stylesheet" href="./resources/css/import.css">
+<script src="./resources/js/libs/jquery.min.js"></script>
+</head>
+<body>
+<div class="wrap">
+	<!-- SIDEBAR -->
+	<div class="sidebar-wrap"> <!-- [D] 비활성화 시 off 클래스 -->
+		<div class="sidebar-inner">
+			<div class="sidebar-header">
+				<h1>Logo 240x65</h1>
+			</div>
+			<div class="sidebar-content">
+				<div class="sidebar-menu">
+					<div class="sidebar-menu-item on"> <!-- [D] 활성화 시 on 클래스 -->
+						<h2>
+							<button type="button"><span>menu1</span></button>
+						</h2>
+						<div class="sidebar-pannel">
+							<ul>
+								<li>
+									<a href="javascript:void(0)" class="on"><span>sub1</span></a> <!-- [D] 활성화 시 on 클래스 -->
+								</li>
+								<li>
+									<a href="javascript:void(0)"><span>sub2</span></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="sidebar-menu-item">
+						<h2>
+							<button type="button"><span>menu2</span></button>
+						</h2>
+						<div class="sidebar-pannel">
+							<ul>
+								<li>
+									<a href="javascript:void(0)"><span>sub1</span></a>
+								</li>
+								<li>
+									<a href="javascript:void(0)"><span>sub2</span></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //SIDEBAR -->
+	<!-- PAGE -->
+	<div class="page-wrap">
+		<div class="page-header">
+			<div class="header-item">
+				<button type="button" class="btn-sidebar"></button>
+				<div class="search">
+					<input type="text" placeholder="검색">
+					<button type="button"></button>
+				</div>
+			</div>
+			<div class="header-item">
+				<button type="button" class="setup"></button>
+				<div class="avatar"></div>
+			</div>
+		</div>
+		<div class="main-tabs">
+			<ul>
+				<li class="on"> <!-- [D] 활성화 시 on 클래스 -->
+					<a href="javascript:void(0)">대시보드</a>
+					<div class="actions"><button type="button" class="refresh"></button></div>
+				</li>
+				<li>
+					<a href="javascript:void(0)">시스템 관리</a>
+					<div class="actions"><button type="button" class="close"></button></div>
+				</li>
+			</ul>
+		</div>
+		<div class="sub-tabs">
+			<ul>
+				<li>
+					<a href="javascript:void(0)">공통코드 관리</a>
+					<div class="actions">
+						<button type="button" class="refresh"></button>
+						<button type="button" class="close"></button>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:void(0)">공통코드 관리</a>
+					<div class="actions">
+						<button type="button" class="refresh"></button>
+						<button type="button" class="close"></button>
+					</div>
+				</li>
+				<li class="on">
+					<a href="javascript:void(0)">메뉴 관리</a>
+					<div class="actions">
+						<button type="button" class="refresh"></button>
+						<button type="button" class="close"></button>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="page-container" role="main">
+			<div class="breadcrumbs">
+				<ol>
+					<li class="home">
+						<a href="javascript:void(0)">홈</a>
+					</li>
+					<li>페이지</li>
+				</ol>
+			</div>
+			<!-- CONTENT -->
+			<div class="page-content">
+				<div class="iframe-container">
+					<iframe></iframe>
+				</div>
+			</div>
+			<!-- //CONTENT -->
+		</div>
+	</div>
+	<!-- //PAGE -->
+</div>
+
+<script>
+	//화면테스트
+	$('.btn-sidebar').on('click', function() {
+		$('.sidebar-wrap').toggleClass('off');
+	});
+
+	$('.sidebar-menu-item button').on('click', function() {
+		$('.sidebar-menu-item').removeClass('on');
+		$(this).closest('.sidebar-menu-item').toggleClass('on');
+	});
+
+	function checkWidth() {
+		if ($(window).width() <= 700) {
+			$('.sidebar-wrap').addClass('off');
+		} else {
+			$('.sidebar-wrap').removeClass('off'); // 필요 시 제거
+		}
+	}
+	checkWidth();
+	$(window).resize(function() {
+		checkWidth();
+	});
+</script>
+</body>
+</html>
