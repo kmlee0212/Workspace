@@ -7,7 +7,7 @@
 		flex:1;
 		display:flex;
 		flex-direction:column;
-		background-color:#f3f4f6;
+		/* background-color:#f3f4f6; */
 	}
 	.page-header {
 		flex:none;
@@ -23,7 +23,7 @@
 				gap:1rem;
 			}
 			&:nth-child(2) {
-				gap:.4rem;
+				gap:.6rem;
 			}
 			.btn-sidebar {
 				width:2.8rem;
@@ -45,23 +45,22 @@
 				input {
 					flex:1;
 					padding-right:3.4rem;
-					border:0;
 				}
 				button {
 					position:absolute;
 					right:0;
 					top:0;
-					width:3.2rem;
-					height:100%;
-					background-color:#999;
-					background:url(../images/ico/ico_search_b.png) no-repeat 50%;
+					width:3rem;
+					height:2.8rem;
+					margin:1px;
+					border-left:1px solid #e8e8e8;
+					background:#fff url(../images/ico/ico_search_b.png) no-repeat 50%;
 					background-size:2.2rem;
 				}
 			}
 			.setup {
 				width:2.8rem;
 				height:2.8rem;
-				background-color:#ccc;
 				background:url(../images/ico/ico_setup_w.png) no-repeat 50%;
 				background-size:2rem;
 				transition:all .3s;
