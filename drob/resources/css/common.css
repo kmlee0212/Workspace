@@ -241,11 +241,12 @@ a[class^="btn-"].xs {
 					border-radius:.6rem .6rem 0 0;
 					background-color:#f3f4f6;
 					font-size:1.6rem;
-					color:var(--gray-500);
+					color:var(--gray-400);
 					white-space:nowrap;
 					transition:all .3s;
 					&:hover {
 						background-color:#e5e7eb;
+						color:var(--gray-600);
 					}
 				}
 				&:has(.on) {
@@ -277,9 +278,12 @@ a[class^="btn-"].xs {
 					height:100%;
 					padding:0 1.6rem .3rem;
 					font-size:1.6rem;
-					color:var(--gray-500);
+					color:var(--gray-400);
 					white-space:nowrap;
 					transition:all .3s;
+					&:hover {
+						color:var(--gray-600);
+					}
 				}
 				&:has(.on) {
 					position:relative;
