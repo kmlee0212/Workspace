@@ -18,32 +18,6 @@
 			right:2rem;
 			top:1.6rem;
 		}
-		.progress {
-			margin-top:.8rem;
-			.bar {
-				overflow:hidden;
-				position:relative;
-				height:.6rem;
-				background-color:#e9ecef;
-				border-radius:10rem;
-				> span {
-					position:absolute;
-					left:0;
-					top:0;
-					height:100%;
-					transition:width .3s;
-				}
-			}
-			.legend {
-				display:flex;
-				align-items:center;
-				justify-content:space-between;
-				margin-top:.4rem;
-				.muted {
-					color:#666;
-				}
-			}
-		}
 	}
 	.stat-card1 {
 		.progress {
@@ -110,15 +84,22 @@
 	
 }
 
+.task-list, .board-list {
+	overflow-y:auto;
+	overflow-x:hidden;
+	max-height:38rem;
+}
 .task-list {
 	> ul {
-		border-top:1px solid var(--gray-200);
 		> li {
 			display:flex;
 			align-items:center;
 			justify-content:space-between;
-			padding:1.2rem 0;
-			border-bottom:1px solid var(--gray-200);
+			padding:1.3rem 0;
+			border-top:1px solid var(--gray-100);
+			&:first-child {
+				border-top:0;
+			}
 		}
 	}
 	.choice {
@@ -127,56 +108,18 @@
 		}
 	}
 }
-
-.activity-list {
+.board-list {
 	> ul {
 		> li {
-			border:1px solid var(--gray-200);
-			border-width:1px 0;
-			& ~ li {
-				margin-top:-1px;
+			border-top:1px solid var(--gray-100);
+			&:first-child {
+				border-top:0;
 			}
-			> div {
-				display:flex;
-				gap:.8rem;
-				padding:1.2rem .8rem;
-			}
-		}
-	}
-	.img {
-		flex:none;
-		width:3.6rem;
-		height:3.6rem;
-		background-color:#efefef;
-		border-radius:50%;
-	}
-	.con {
-		display:flex;
-		flex-direction:column;
-		gap:.4rem;
-		.txt1 {
-			font-size:1.6rem;
-			color:var(--gray-800);
-		}
-		.txt2 {
-		}
-		.txt3 {
-			font-size:1.2rem;
-			color:var(--gray-400);
-		}
-	}
-}
-
-.notice-list {
-	> ul {
-		> li {
-			border:1px solid var(--gray-200);
-			border-width:1px 0;
 			& ~ li {
 				margin-top:-1px;
 			}
 			&.pin {
-				background-color:#fffedf;
+				background-color:#fffee2;
 			}
 			> div {
 				display:flex;
@@ -185,7 +128,7 @@
 			}
 		}
 	}
-	.img {
+	.ico {
 		flex:none;
 		width:3.6rem;
 		height:3.6rem;
@@ -195,9 +138,12 @@
 	.con {
 		display:flex;
 		flex-direction:column;
-		gap:.4rem;
+		gap:.2rem;
 		.txt1 {
-			font-size:1.6rem;
+			display:flex;
+			align-items:center;
+			gap:.8rem;
+			font-size:1.5rem;
 			color:var(--gray-800);
 		}
 		.txt2 {

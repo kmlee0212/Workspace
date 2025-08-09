@@ -24,8 +24,8 @@
 					<option value="">이번 분기</option>
 					<option value="">올해</option>
 				</select>
-				<button type="button" class="btn-outline1 m">업데이트</button>
-				<button type="button" class="btn-outline2 m">내보내기</button>
+				<button type="button" class="btn-outline1 m ico-upload"><span>업데이트</span></button>
+				<button type="button" class="btn-outline2 m ico-save"><span>내보내기</span></button>
 			</div>
 		</div>
 		<div class="flex-list">
@@ -99,7 +99,7 @@
 				<div class="persent" title="전월대비">
 					<em class="badge type2">-12.5%</em>
 				</div>
-				<div class="progress">
+				<div class="progress type1">
 					<div class="bar">
 						<span style="width:75%"></span>
 					</div>
@@ -139,10 +139,10 @@
 					<table>
 						<caption></caption>
 						<colgroup>
-							<col style="width:25%">
-							<col style="width:25%">
-							<col style="width:25%">
-							<col style="width:25%">
+							<col style="width:28%">
+							<col style="width:22%">
+							<col>
+							<col style="width:22%">
 						</colgroup>
 						<thead>
 							<tr>
@@ -160,6 +160,24 @@
 								<td><em class="badge type1">완료</em></td>
 							</tr>
 							<tr>
+								<td>#INV-2305</td>
+								<td>김민준</td>
+								<td class="ar">₩385,000</td>
+								<td><em class="badge type4">대기</em></td>
+							</tr>
+							<tr>
+								<td>#INV-2305</td>
+								<td>김민준</td>
+								<td class="ar">₩385,000</td>
+								<td><em class="badge type2">취소</em></td>
+							</tr>
+							<tr>
+								<td>#INV-2305</td>
+								<td>김민준</td>
+								<td class="ar">₩385,000</td>
+								<td><em class="badge type3">배송중</em></td>
+							</tr>
+							<tr>
 								<td colspan="4" class="no-data"><p>게시물이 없습니다.</p></td>
 							</tr>
 						</tbody>
@@ -167,7 +185,7 @@
 				</div>
 				<!-- //TABLE -->
 				<div class="btn-more">
-					<a href="javascript:void(0)">더보기</a>
+					<a href="javascript:void(0)"><span>모든 거래 보기</span></a>
 				</div>
 			</div>
 		</div>
@@ -178,7 +196,7 @@
 						<h3>작업목록</h3>
 					</div>
 					<div class="item">
-						<button type="button" class="btn-outline2 m">+ 추가</button>
+						<button type="button" class="btn-outline2 s ico-plus"><span>추가</span></button>
 					</div>
 				</div>
 				<div class="card-con">
@@ -202,7 +220,45 @@
 								</div>
 								<em class="priority low">낮음</em>
 							</li>
+							<li>
+								<div class="choice">
+									<label><input type="checkbox" name=""><em class="label">Q2 마케팅 계획 수립</em></label>
+								</div>
+								<em class="priority low">낮음</em>
+							</li>
+							<li>
+								<div class="choice">
+									<label><input type="checkbox" name=""><em class="label">Q2 마케팅 계획 수립</em></label>
+								</div>
+								<em class="priority low">낮음</em>
+							</li>
+							<li>
+								<div class="choice">
+									<label><input type="checkbox" name=""><em class="label">Q2 마케팅 계획 수립</em></label>
+								</div>
+								<em class="priority low">낮음</em>
+							</li>
+							<li>
+								<div class="choice">
+									<label><input type="checkbox" name=""><em class="label">Q2 마케팅 계획 수립</em></label>
+								</div>
+								<em class="priority low">낮음</em>
+							</li>
+							<li>
+								<div class="choice">
+									<label><input type="checkbox" name=""><em class="label">Q2 마케팅 계획 수립</em></label>
+								</div>
+								<em class="priority low">낮음</em>
+							</li>
 						</ul>
+					</div>
+				</div>
+				<div class="progress type2">
+					<div class="bar">
+						<span style="width:75%"></span>
+					</div>
+					<div class="legend">
+						<span class="muted">완료 : <em>3</em><span>/</span><em>7</em></span>
 					</div>
 				</div>
 			</div>
@@ -213,25 +269,55 @@
 					</div>
 				</div>
 				<div class="card-con">
-					<div class="activity-list">
+					<div class="board-list">
 						<ul>
 							<li>
 								<div>
-									<div class="img"></div>
+									<div class="ico"></div>
 									<div class="con">
-										<div class="txt1">김민준님이 새 문서를 업로드했습니다.</div>
+										<div class="txt1"><p>김민준님이 새 문서를 업로드했습니다.</p></div>
 										<div class="txt2">Q2_분기_보고서.pdf</div>
-										<div class="txt3">방금 전</div>
+										<div class="txt3"><p>방금 전</p></div>
 									</div>
 								</div>
 							</li>
 							<li>
 								<div>
-									<div class="img"></div>
+									<div class="ico"></div>
 									<div class="con">
-										<div class="txt1">김민준님이 새 문서를 업로드했습니다.</div>
-										<div class="txt2"><em class="badge type4">우선순위</em><em class="badge type1">완료</em></div>
-										<div class="txt3">방금 전</div>
+										<div class="txt1"><p>김민준님이 새 문서를 업로드했습니다.</p></div>
+										<div class="txt2"><p><em class="badge type4">우선순위</em><em class="badge type1">완료</em></p></div>
+										<div class="txt3"><p>방금 전</p></div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div>
+									<div class="ico"></div>
+									<div class="con">
+										<div class="txt1"><p>김민준님이 새 문서를 업로드했습니다.</p></div>
+										<div class="txt2"><p><em class="badge type4">우선순위</em><em class="badge type1">완료</em></p></div>
+										<div class="txt3"><p>방금 전</p></div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div>
+									<div class="ico"></div>
+									<div class="con">
+										<div class="txt1"><p>김민준님이 새 문서를 업로드했습니다.</p></div>
+										<div class="txt2"><p><em class="badge type4">우선순위</em><em class="badge type1">완료</em></p></div>
+										<div class="txt3"><p>방금 전</p></div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div>
+									<div class="ico"></div>
+									<div class="con">
+										<div class="txt1"><p>김민준님이 새 문서를 업로드했습니다.</p></div>
+										<div class="txt2"><p><em class="badge type4">우선순위</em><em class="badge type1">완료</em></p></div>
+										<div class="txt3"><p>방금 전</p></div>
 									</div>
 								</div>
 							</li>
@@ -239,15 +325,15 @@
 					</div>
 				</div>
 				<div class="btn-more">
-					<a href="javascript:void(0)">더보기</a>
+					<a href="javascript:void(0)"><span>모든 활동 보기</span></a>
 				</div>
 			</div>
 			<div class="cards">
 				<!-- TAB -->
-				<div class="tab-menu type2">
+				<div class="tab-menu type2" data-value="1"> <!-- [D] 활성화할 초기값 -->
 					<ul>
 						<li>
-							<button type="button" role="link" class="on"><span>메뉴1</span></button> <!-- [D] 활성화 시 on 클래스 -->
+							<button type="button" role="link"><span>메뉴1</span></button>
 						</li>
 						<li>
 							<button type="button" role="link"><span>메뉴2</span></button>
@@ -255,26 +341,56 @@
 					</ul>
 				</div>
 				<div class="tab-content">
-					<div class="tab-panel on"> <!-- [D] 활성화 시 on 클래스 -->
-						<div class="notice-list">
+					<div class="tab-panel">
+						<div class="board-list">
 							<ul>
 								<li class="pin">
 									<div>
-										<div class="img"></div>
+										<div class="ico"></div>
 										<div class="con">
-											<div class="txt1">시스템 업데이트 안내</div>
-											<div class="txt2">5월 25일 오전 2시부터 4시까지 시스템 점검이 예정되어 있습니다.</div>
-											<div class="txt3">방금 전</div>
+											<div class="txt1"><p>시스템 업데이트 안내</p></div>
+											<div class="txt2"><p>5월 25일 오전 2시부터 4시까지 시스템 점검이 예정되어 있습니다.</p></div>
+											<div class="txt3"><p>방금 전</p></div>
 										</div>
 									</div>
 								</li>
 								<li>
 									<div>
-										<div class="img"></div>
+										<div class="ico"></div>
 										<div class="con">
-											<div class="txt1">시스템 업데이트 안내</div>
-											<div class="txt2">5월 25일 오전 2시부터 4시까지 시스템 점검이 예정되어 있습니다.</div>
-											<div class="txt3">방금 전</div>
+											<div class="txt1"><p>시스템 업데이트 안내</p></div>
+											<div class="txt2"><p>5월 25일 오전 2시부터 4시까지 시스템 점검이 예정되어 있습니다.</p></div>
+											<div class="txt3"><p>방금 전</p></div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div>
+										<div class="ico"></div>
+										<div class="con">
+											<div class="txt1"><p>시스템 업데이트 안내</p></div>
+											<div class="txt2"><p>5월 25일 오전 2시부터 4시까지 시스템 점검이 예정되어 있습니다.</p></div>
+											<div class="txt3"><p>방금 전</p></div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div>
+										<div class="ico"></div>
+										<div class="con">
+											<div class="txt1"><p>시스템 업데이트 안내</p></div>
+											<div class="txt2"><p>5월 25일 오전 2시부터 4시까지 시스템 점검이 예정되어 있습니다.</p></div>
+											<div class="txt3"><p>방금 전</p></div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div>
+										<div class="ico"></div>
+										<div class="con">
+											<div class="txt1"><p>시스템 업데이트 안내</p></div>
+											<div class="txt2"><p>5월 25일 오전 2시부터 4시까지 시스템 점검이 예정되어 있습니다.</p></div>
+											<div class="txt3"><p>방금 전</p></div>
 										</div>
 									</div>
 								</li>
@@ -282,12 +398,47 @@
 						</div>
 					</div>
 					<div class="tab-panel">
-						내용2
+						<div class="calendar">
+							캘린더 영역
+						</div>
+						<div class="tits2">
+							<div class="tit">
+								<h3>다가오는 일정</h3>
+							</div>
+						</div>
+						<div class="board-list">
+							<ul>
+								<li>
+									<div>
+										<div class="con">
+											<div class="txt1"><p>팀 미팅</p><em class="badge type5">오늘</em></div>
+											<div class="txt2">오후 2:00 ~ 3:30</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div>
+										<div class="con">
+											<div class="txt1"><p>팀 미팅</p><em class="badge type2">내일</em></div>
+											<div class="txt2">종일</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div>
+										<div class="con">
+											<div class="txt1"><p>팀 미팅</p><em class="badge type4">5월 25일</em></div>
+											<div class="txt2">오후 2:00 ~ 3:30</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 				<!-- //TAB -->
 				<div class="btn-more">
-					<a href="javascript:void(0)">더보기</a>
+					<a href="javascript:void(0)"><span>모두 보기</span></a>
 				</div>
 			</div>
 		</div>
@@ -295,7 +446,93 @@
 </div>
 
 <script>
+	//화면테스트
+	function tabAction() {
+		const $tabs = $('.tab-menu');
+		$tabs.each(function() {
+			const $this = $(this);
+			const $active = $this.attr('data-value');
 	
+			if ($active != 0) {
+				tabMovementChecking(true);
+				$this.next('.tab-content').find('.tab-panel').hide();
+				$this.next('.tab-content').find('.tab-panel:eq(' + ($active - 1) + ')').show();
+	
+				$this.find('li button').off().on('click', function() {
+					const $btn = $(this);
+					const $idx = $btn.parent().index();
+					const $content = $btn.closest('.tab-menu').next('.tab-content').find('> .tab-panel');
+					const $spd = 200;
+	
+					$this.attr('data-value', $idx + 1);
+					$content.hide();
+					$content.eq($idx).show();
+	
+					if ($btn.closest('.tab-menu').next('.tab-content').length) {
+						if ($btn.closest('.page-wrap').length) {
+							const $headerH = $('.header').height();
+							const $tabMenuH = $btn.closest('.tab-menu').outerHeight(true);
+							const $tabContent = $btn.closest('.tab-menu').next('.tab-content').offset();
+	
+							$('html, body').stop().animate({
+								'scrollTop': ($tabContent.top-($headerH + $tabMenuH)) + 'px'
+							}, $spd);
+						} else {
+							const $tabMenuH = $btn.closest('.tab-menu').height();
+							const $tabContent = $btn.closest('.tab-menu').next('.tab-content').position();
+	
+							$btn.closest('.popup-container').stop().animate({
+								'scrollTop': ($tabContent.top - ($tabMenuH + 10))+'px'
+							}, $spd);
+						}
+					}
+				});
+			} else {
+				tabMovementChecking(false);
+				$this.next('.tab-content').find('.tab-panel').hide();
+			}
+			
+			/* TAB MOVEMENT CHECKING */
+			function tabMovementChecking(checking) {
+				if (checking) {
+					$this.find('li button').removeClass('on');
+					$this.find('li:eq(' + ($active - 1) + ') button').addClass('on');
+				} else {
+					$('.tab-menu li button').removeClass('on');
+				}
+			}
+		});
+	} tabAction();
+	
+	// DOM 변경 감지 함수
+	function observeAttributeChange() {
+		const elementsActions = [
+			{ selector: '.tab-menu', action: tabAction } // 탭 함수 호출
+		];
+	
+		const observer = new MutationObserver(function(mutations) {
+			mutations.forEach(function(mutation) {
+				if (mutation.attributeName === 'data-value') {
+					const matchedElementAction = elementsActions.find(
+						item => mutation.target.matches(item.selector)
+					);
+					if (matchedElementAction) {
+						matchedElementAction.action();
+					}
+				}
+			});
+		});
+	
+		elementsActions.forEach(function(item) {
+			const elements = document.querySelectorAll(item.selector);
+			if (elements.length) {
+				elements.forEach(function(element) {
+					observer.observe(element, { attributes: true, attributeFilter: ['data-value'] });
+				});
+			}
+		});
+	}
+	observeAttributeChange();
 </script>
 </body>
 </html>
