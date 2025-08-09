@@ -118,6 +118,9 @@
 			& ~ li {
 				margin-top:-1px;
 			}
+			&:hover {
+				background-color:var(--gray-50);
+			}
 			&.pin {
 				background-color:#fffee2;
 			}
@@ -132,8 +135,51 @@
 		flex:none;
 		width:3.6rem;
 		height:3.6rem;
-		background-color:#efefef;
+		background-repeat:no-repeat;
+		background-position:50%;
+		background-size:1.8rem;
 		border-radius:50%;
+		&.ico1 {
+			background-image:url(../images/ico/ico_etc1_b.png);
+		}
+		&.ico2 {
+			background-image:url(../images/ico/ico_etc2_b.png);
+		}
+		&.ico3 {
+			background-image:url(../images/ico/ico_etc3_b.png);
+		}
+		&.ico4 {
+			background-image:url(../images/ico/ico_etc4_b.png);
+		}
+		&.ico5 {
+			background-image:url(../images/ico/ico_etc5_b.png);
+		}
+		&.ico6 {
+			background-image:url(../images/ico/ico_etc6_b.png);
+		}
+		&.ico7 {
+			background-image:url(../images/ico/ico_etc7_b.png);
+		}
+		&.ico8 {
+			background-image:url(../images/ico/ico_etc8_b.png);
+		}
+		&:not(.notification .ico) {
+			&.ico1 {
+				background-color:rgba(59, 130, 246, 0.1);
+			}
+			&.ico2 {
+				background-color:rgba(16, 185, 129, 0.1);
+			}
+			&.ico3 {
+				background-color:rgba(14, 165, 233, 0.1);
+			}
+			&.ico4 {
+				background-color:rgba(245, 158, 11, 0.1);
+			}
+			&.ico5 {
+				background-color:rgba(239, 68, 68, 0.1);
+			}
+		}
 	}
 	.con {
 		display:flex;
