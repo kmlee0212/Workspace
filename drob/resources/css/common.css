@@ -23,6 +23,14 @@
 	opacity:.01;
 	clip:rect(1px,1px,1px,1px);
 }
+.hover {
+	transition: transform 0.3s, box-shadow 0.3s;
+	&:hover {
+		border-color:transparent;
+		box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1) !important;
+		transform: translateY(-5px);
+	}
+}
 
 /* MARGIN */
 
@@ -63,9 +71,21 @@
 	align-items:center;
 	justify-content:space-between;
 	position:relative;
+	.tit {
+		display:flex;
+		align-items:center;
+		gap:.8rem;
+	}
 	.item {
 		display:flex;
 		gap:.4rem;
+	}
+	.counter {
+		padding:0 .8rem;
+		background-color:var(--blue-600);
+		border-radius:.6rem;
+		font-size:1.4rem;
+		color:#fff;
 	}
 }
 .tits1 {
@@ -138,8 +158,9 @@
 
 [class^="btn-solid"],
 [class^="btn-outline"] {
-	padding:0 1.2rem;
+	padding:0 .8rem;
 	border-radius:.5rem;
+	text-align:center;
 	white-space:nowrap;
 	transition:all .3s;
 }
@@ -156,33 +177,34 @@ a[class^="btn-outline"] {
 
 }
 .btn-outline1 {
-	border:1px solid var(--blue-200);
+	border:1px solid var(--blue-300);
 	background-color:var(--blue-50);
-	color:var(--blue-500);
+	color:var(--blue-600);
 }
 .btn-outline1:hover {
 	background-color:var(--blue-100);
-	color:var(--blue-600);
+	color:var(--blue-800);
 }
 .btn-outline1:disabled {
 
 }
 .btn-outline2 {
-	border:1px solid var(--gray-300);
+	border:1px solid var(--gray-400);
 	background-color:var(--gray-100);
-	color:var(--gray-500);
+	color:var(--gray-600);
 }
 .btn-outline2:hover {
 	background-color:var(--gray-200);
-	color:var(--gray-600);
+	color:var(--gray-800);
 }
 
 [class^="btn-"].l {
-	height:3.4rem;
+	height:3.8rem;
 	font-size:1.5rem;
+	font-weight:700;
 }
 [class^="btn-"].m {
-	height:3rem;
+	height:3.4rem;
 	font-size:1.4rem;
 }
 [class^="btn-"].s {
@@ -194,6 +216,7 @@ a[class^="btn-outline"] {
 	> span {
 		display:flex;
 		align-items:center;
+		justify-content:center;
 	}
 	&[class*="ico-"] {
 		span {
@@ -202,15 +225,14 @@ a[class^="btn-outline"] {
 				margin-left:-.2rem;
 				background-repeat:no-repeat;
 				background-position:50%;
-				opacity:.8;
 			}
 		}
 		&.m {
 			span {
-				gap:.4rem;
+				gap:.2rem;
 				&::before {
-					width:1.8rem;
-					height:1.8rem;
+					width:2rem;
+					height:2rem;
 					background-size:1.6rem;
 				}
 			}
@@ -221,9 +243,19 @@ a[class^="btn-outline"] {
 				&::before {
 					width:1.4rem;
 					height:1.4rem;
-					background-size:.8rem;
+					background-size:1.2rem;
 				}
 			}
+		}
+	}
+	&.ico-search {
+		span::before {
+			background-image:url(../images/ico/ico_search_b.png);
+		}
+	}
+	&.ico-refresh {
+		span::before {
+			background-image:url(../images/ico/ico_refresh_b.png);
 		}
 	}
 	&.ico-upload {
@@ -254,6 +286,11 @@ a[class^="btn-outline"] {
 	&.ico-minus {
 		span::before {
 			background-image:url(../images/ico/ico_minus_b.png);
+		}
+	}
+	&.ico-delete {
+		span::before {
+			background-image:url(../images/ico/ico_delete_b.png);
 		}
 	}
 }
@@ -440,7 +477,7 @@ select,
 textarea {
 	width:100%;
 	padding:0 .6rem;
-	border:1px solid #e8e8e8;
+	border:1px solid var(--gray-300);
 	border-radius:.3rem;
 	background-color:#fff;
 	font-size:1.4rem;
@@ -449,7 +486,7 @@ textarea {
 }
 input:where([type="text"], [type="password"], [type="search"]),
 select {
-	height:3rem;
+	height:3.4rem;
 }
 input[type="password"]:not(:placeholder-shown){
 	font-family:auto;
@@ -482,14 +519,13 @@ textarea:where(:read-only, :disabled) {
 input:hover,
 select:hover,
 textarea:hover {
-	border-color:#999;
+	border-color:var(--gray-400);
 }
 input:focus,
 select:focus,
 textarea:focus {
 	border-color:var(--blue-600);
 	background-color:var(--blue-100);
-	box-shadow:0 0 .4rem 0 rgba(0,0,0,.15);
 }
 
 ::placeholder {
@@ -544,6 +580,87 @@ input:disabled + .label {
 		display:flex;
 		align-items:center;
 		gap:.8rem;
+	}
+}
+
+/* SEARCH */
+.search-list {
+	margin-bottom:1.2rem;
+	form {
+		display:flex;
+		gap:.4rem;
+	}
+	input {
+		height:3.8rem !important;
+		background-color:var(--gray-50);
+	}
+	button {
+		width:5rem;
+	}
+}
+
+.search-box {
+	display:flex;
+	align-items:center;
+	margin-bottom:2.4rem;
+	padding:1.6rem 1.8rem;
+	background-color:var(--gray-50);
+	border-radius:.8rem;
+	.search {
+		flex:1;
+		.inner {
+			display:flex;
+			& ~ .inner {
+				margin-top:1.2rem;
+			}
+		}
+		dl {
+			flex: 0 0 auto;
+			& ~ dl {
+				margin-left:1.2rem;
+			}
+			dt {
+				margin-bottom:.4rem;
+				font-size:1.4rem;
+				font-weight:700;
+				color:var(--gray-600);
+			}
+		}
+		&:not([class*="col"]) {
+			dl {
+				flex:1;
+			}
+		}
+		&.col4 {
+			dl {
+				width:calc(25% - .9rem);
+			}
+		}
+		&.col3 {
+			dl {
+				width:calc(33.33333333333333% - .8rem);
+			}
+		}
+		&.col2 {
+			dl {
+				width:calc(50% - .6rem);
+			}
+		}
+	}
+	.btn {
+		width:12rem;
+		display:flex;
+		align-items:center;
+		height:100%;
+		margin-left:1.6rem;
+		padding-left:1.6rem;
+		border-left:1px solid var(--gray-200);
+		.inner {
+			flex:1;
+			display:flex;
+			flex-direction:column;
+			gap:.8rem;
+		}
 	}
 }
 
@@ -615,6 +732,7 @@ input:disabled + .label {
 	padding:0 .6rem;
 	border-radius:.4rem;
 	font-size:1.2rem;
+	white-space:nowrap;
 	& ~ .badge {
 		margin-left:.4rem;
 	}
@@ -698,22 +816,23 @@ input:disabled + .label {
 /* CARD */
 .cards {
 	position:relative;
-	padding:1.2rem 1.6rem;
+	padding:1.6rem 1.8rem;
+	border-radius:.8rem;
 	border:1px solid var(--gray-200);
-	border-radius:1.2rem;
-	transition:all .3s;
+	/* box-shadow: 0 4px 12px rgba(0,0,0,0.05) !important;
+	transition:all .3s; */
 	&:hover {
-		border-color:var(--gray-300);
+		/* border-color:var(--gray-300); */
 	}
 	&.flex2 {
-		flex:2.1;
+		flex:2.12;
 	}
 }
 
 .flex-list {
 	display:flex;
-	gap:1.6rem;
-	&~ .flex-list {
+	gap:2rem;
+	& ~ .flex-list {
 		margin-top:1.6rem;
 	}
 	> div {
@@ -800,6 +919,18 @@ input:disabled + .label {
 
 }
 
+/* SUMMAY */
+.summay-list {
+	overflow:hidden;
+	margin-bottom:1.2rem;
+	.btn {
+		display:flex;
+		gap:.4rem;
+		float:right;
+		margin:0 auto 0 0;
+	}
+}
+
 
 /* =======================
 	MOBILE
@@ -810,6 +941,12 @@ input:disabled + .label {
 		align-items:flex-start;
 		.item {
 			margin-top:.8rem;
+		}
+	}
+	.flex-list {
+		flex-direction:column;
+		& > div {
+			width:100% !important;
 		}
 	}
 }

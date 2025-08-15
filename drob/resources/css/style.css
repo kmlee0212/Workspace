@@ -202,6 +202,20 @@
 }
 
 /* =======================
+	COMMON-CODE
+======================= */
+.common-code-wrap {
+	.flex-list {
+		> div {
+			&:first-child {
+				flex:none;
+				width:34rem;
+			}
+		}
+	}
+}
+
+/* =======================
 	MOBILE
 ======================= */
 @media only screen and (max-width: 650px) {
