@@ -246,7 +246,7 @@ a[class^="btn-outline"] {
 				&::before {
 					width:2.4rem;
 					height:2.4rem;
-					background-size:1.6rem;
+					background-size:1.8rem;
 				}
 			}
 		}
