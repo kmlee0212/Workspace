@@ -12,23 +12,31 @@
 <div class="page-content">
 	<div class="screen-wrap">
 		<div class="search-box">
-			<div class="search">
-				<div class="inner">
-					<dl>
-						<dt>화면ID</dt>
-						<dd>
+			<table>
+				<colgroup>
+					<col style="width:13rem">
+					<col style="">
+					<col style="width:13rem">
+					<col style="">
+					<col style="width:13rem">
+					<col style="">
+					<col style="width:13rem">
+					<col style="">
+					<col style="width:13rem">
+					<col style="">
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">화면ID</th>
+						<td>
 							<input type="text" placeholder="화면ID 입력">
-						</dd>
-					</dl>
-					<dl>
-						<dt>화면명</dt>
-						<dd>
+						</td>
+						<th scope="row">화면명</th>
+						<td>
 							<input type="text" placeholder="화면명 입력">
-						</dd>
-					</dl>
-					<dl>
-						<dt>출력시스템</dt>
-						<dd>
+						</td>
+						<th scope="row">출력시스템</th>
+						<td>
 							<!-- SELECT -->
 							<div class="select-box" style="width:100%;">
 								<div class="label" id="sel-id1">셀렉트 선택</div>
@@ -43,11 +51,9 @@
 								</div>
 							</div>
 							<!-- //SELECT -->
-						</dd>
-					</dl>
-					<dl>
-						<dt>화면유형</dt>
-						<dd>
+						</td>
+						<th scope="row">화면유형</th>
+						<td>
 							<!-- SELECT -->
 							<div class="select-box" style="width:100%;">
 								<div class="label" id="sel-id1">셀렉트 선택</div>
@@ -62,11 +68,9 @@
 								</div>
 							</div>
 							<!-- //SELECT -->
-						</dd>
-					</dl>
-					<dl>
-						<dt>업무구분</dt>
-						<dd>
+						</td>
+						<th scope="row">업무구분</th>
+						<td>
 							<!-- SELECT -->
 							<div class="select-box" style="width:100%;">
 								<div class="label" id="sel-id1">셀렉트 선택</div>
@@ -81,10 +85,10 @@
 								</div>
 							</div>
 							<!-- //SELECT -->
-						</dd>
-					</dl>
-				</div>
-			</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
 			<div class="btn">
 				<div class="inner">
 					<button type="button" class="btn-solid1 l ico-search"><span>조회</span></button>

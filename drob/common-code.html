@@ -29,31 +29,33 @@
 			</div>
 			<div class="content">
 				<div class="search-box">
-					<div class="search col3">
-						<div class="inner">
-							<dl>
-								<dt>카테고리코드</dt>
-								<dd>
+					<table>
+						<colgroup>
+							<col style="width:13rem">
+							<col style="">
+							<col style="width:13rem">
+							<col style="">
+							<col style="width:13rem">
+							<col style="">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">카테고리코드</th>
+								<td>
 									<input type="text" placeholder="카테고리코드 입력">
-								</dd>
-							</dl>
-							<dl>
-								<dt>그룹코드</dt>
-								<dd>
+								</td>
+								<th scope="row">그룹코드</th>
+								<td>
 									<input type="text" placeholder="그룹코드 입력">
-								</dd>
-							</dl>
-							<dl>
-								<dt>코드</dt>
-								<dd>
+								</td>
+								<th scope="row">코드</th>
+								<td>
 									<input type="text" placeholder="코드 입력">
-								</dd>
-							</dl>
-						</div>
-						<div class="inner">
-							<dl>
-								<dt>사용자연락처구분(초이스)</dt>
-								<dd>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">사용자연락처구분(초이스)</th>
+								<td>
 									<!-- SELECT -->
 									<div class="select-box" style="width:100%;">
 										<div class="label" id="sel-id1">셀렉트 선택</div>
@@ -68,11 +70,9 @@
 										</div>
 									</div>
 									<!-- //SELECT -->
-								</dd>
-							</dl>
-							<dl>
-								<dt>화면유형코드(일반)</dt>
-								<dd>
+								</td>
+								<th scope="row">화면유형코드(일반)</th>
+								<td>
 									<!-- SELECT -->
 									<div class="select-box" style="width:100%;">
 										<div class="label" id="sel-id1">셀렉트 선택</div>
@@ -87,10 +87,12 @@
 										</div>
 									</div>
 									<!-- //SELECT -->
-								</dd>
-							</dl>
-						</div>
-					</div>
+								</td>
+								<th scope="row"></th>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
 					<div class="btn">
 						<div class="inner">
 							<button type="button" class="btn-solid1 l ico-search"><span>조회</span></button>
