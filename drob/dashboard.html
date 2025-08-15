@@ -17,13 +17,23 @@
 				<p class="txts1">2025년 5월 23일 기준 데이터</p>
 			</div>
 			<div class="item">
-				<select>
-					<option value="">오늘</option>
-					<option value="">이번 주</option>
-					<option value="" selected="selected">이번 달</option>
-					<option value="">이번 분기</option>
-					<option value="">올해</option>
-				</select>
+				<!-- SELECT -->
+				<div class="select-box" style="width:10rem;">
+					<div class="label" id="sel-id1">셀렉트 선택</div>
+					<div class="select">
+						<button type="button" aria-haspopup="true" aria-expanded="false" id="selBtn-id1" aria-labelledby="sel-id1"><em></em></button>
+						<div class="select-option">
+							<ul role="listbox" tabindex="-1" aria-labelledby="selBtn-id1">
+								<li role="option"><button type="button">오늘</button></li>
+								<li role="option"><button type="button">이번 주</button></li>
+								<li role="option" class="selected"><button type="button">이번 달</button></li>
+								<li role="option"><button type="button">이번 분기</button></li>
+								<li role="option"><button type="button">올해</button></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- //SELECT -->
 				<button type="button" class="btn-outline1 m ico-update"><span>업데이트</span></button>
 				<button type="button" class="btn-outline2 m ico-save"><span>내보내기</span></button>
 			</div>
@@ -533,6 +543,65 @@
 		});
 	}
 	observeAttributeChange();
+
+	/* select */
+	function selectbox() {
+		const $selectbox = $('.select-box');
+		const $spd = 200;
+		function selectboxClose() {
+			$selectbox.removeClass('on').find('.select-option').stop().slideUp($spd);
+			$selectbox.find('.select>button').attr('aria-expanded', false);
+		}
+	
+		$selectbox.each(function() {
+			const $loadTxt = $(this).find('li.selected button').html();
+			$(this).find('.select>button em').html($loadTxt);
+	
+			//select click function
+			$(this).find('.select>button').on('click', function() {
+				if (!$(this).parents('.select-box').hasClass('on')) {
+					selectboxClose();
+					$(this).next().find('.selected').attr('aria-selected', true);
+					$(this).parents('.select-box').addClass('on').find('.select-option').stop().slideDown($spd);
+					$(this).next().focus();
+					$(this).attr('aria-expanded', true);
+				} else {
+					selectboxClose();
+				}
+			});
+	
+			//option click function
+			$(this).find('li button').on('click', function() {
+				const $this = $(this);
+				const $thisTxt = $this.html();
+				$this.parent().addClass('selected').attr('aria-selected', true);
+				$this.parent().siblings().removeClass('selected').removeAttr('aria-selected');
+				$this.parents('.select').find('> button em').html($thisTxt);
+				$this.parents('.select').find('> button').focus();
+				selectboxClose();
+			});
+	
+			//key check function
+			$(this).find('.select>button').on('keydown', function(e) {
+				if (e.keyCode === 9 && e.shiftKey) {
+					selectboxClose();
+				}
+			});
+			$(this).find('li:last-child button').on('keydown', function(e) {
+				if (e.keyCode === 9 && e.shiftKey) {
+				} else if (e.keyCode === 9) {
+					selectboxClose();
+				}
+			});
+		});
+	
+		$(document).mouseup(function(e) {
+			const $el = $('.select-box');
+			if (!$el.is(e.target) && $el.has(e.target).length == 0) {
+				selectboxClose();
+			}
+		});
+	} selectbox();
 </script>
 </body>
 </html>
