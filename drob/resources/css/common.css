@@ -993,19 +993,6 @@ input:disabled + .label {
 
 }
 
-/* SUMMAY */
-.summay-list {
-	overflow:hidden;
-	margin-bottom:1.2rem;
-	.btn {
-		display:flex;
-		gap:.4rem;
-		float:right;
-		margin:0 auto 0 0;
-	}
-}
-
-
 /* =======================
 	MOBILE
 ======================= */
