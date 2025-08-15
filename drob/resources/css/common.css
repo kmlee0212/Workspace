@@ -700,8 +700,9 @@ input:disabled + .label {
 		border-right:hidden;
 		th,
 		td {
-			padding:.4rem .8rem;
-			border:1px solid var(--gray-200);
+			padding:.6rem .8rem;
+			border:solid var(--gray-200);
+			border-width:1px 0 1px 1px;
 			font-size:1.4rem;
 			line-height:1.3;
 			text-align:left;
@@ -713,8 +714,13 @@ input:disabled + .label {
 			word-break:keep-all;
 			word-wrap:break-word;
 			white-space:normal;
-		}
-		td {
+			&:not(:has(span)) {
+				border-left:0;
+				background-color:transparent;
+				& ~ td {
+					border-left:0;
+				}
+			}
 		}
 	}
 	.btn {
@@ -885,7 +891,7 @@ input:disabled + .label {
 .cards {
 	position:relative;
 	padding:1.6rem 1.8rem;
-	border-radius:.8rem;
+	border-radius:.6rem;
 	border:1px solid var(--gray-200);
 	/* box-shadow: 0 4px 12px rgba(0,0,0,0.05) !important;
 	transition:all .3s; */

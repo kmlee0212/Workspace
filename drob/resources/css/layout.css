@@ -223,7 +223,7 @@
 					margin-top:1rem;
 					li {
 						& ~ li {
-							margin-top:.2rem;
+							margin-top:.1rem;
 						}
 						a {
 							display:block;
