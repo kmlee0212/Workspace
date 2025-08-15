@@ -75,6 +75,9 @@
 		display:flex;
 		align-items:center;
 		gap:.8rem;
+		&:has([class^="txts"]) {
+			display:block;
+		}
 	}
 	.item {
 		display:flex;
