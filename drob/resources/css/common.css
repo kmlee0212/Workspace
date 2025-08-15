@@ -995,22 +995,3 @@ input:disabled + .label {
 .tables.mix > table > tbody > tr > td {
 
 }
-
-/* =======================
-	MOBILE
-======================= */
-@media only screen and (max-width: 650px) {
-	.tits1 {
-		flex-direction:column;
-		align-items:flex-start;
-		.item {
-			margin-top:.8rem;
-		}
-	}
-	.flex-list {
-		flex-direction:column;
-		& > div {
-			width:100% !important;
-		}
-	}
-}

@@ -209,23 +209,7 @@
 		> div {
 			&:first-child {
 				flex:none;
-				width:34rem;
-			}
-		}
-	}
-}
-
-/* =======================
-	MOBILE
-======================= */
-@media only screen and (max-width: 650px) {
-	.dashboard-wrap {
-		.flex-list {
-			display:block;
-			.cards {
-				& ~ .cards {
-					margin-top:1.2rem;
-				}
+				width:32rem;
 			}
 		}
 	}
