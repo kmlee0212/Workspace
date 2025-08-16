@@ -84,7 +84,7 @@
 			.cards {
 				&:last-child {
 					flex:none;
-					width:calc(100% / 3 - 1.4rem);
+					width:calc(100% / 3 - 1.3rem);
 				}
 			}
 		}
