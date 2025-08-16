@@ -611,7 +611,7 @@ textarea:where(:read-only, :disabled) {
 			ul {
 				li {
 					button {
-						padding:1rem .6rem;
+						padding:.8rem .6rem;
 						border:0;
 						vertical-align:top;
 					}
