@@ -701,7 +701,7 @@ input:disabled + .label {
 		border-right:hidden;
 		th,
 		td {
-			padding:.6rem .8rem;
+			padding:.5rem .8rem;
 			border:solid var(--gray-200);
 			border-width:1px 0 1px 1px;
 			font-size:1.4rem;
