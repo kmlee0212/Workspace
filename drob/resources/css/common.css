@@ -406,7 +406,7 @@ a[class^="btn-outline"] {
 		margin-bottom:1.7rem;
 		ul {
 			display:flex;
-			border-bottom:1px solid var(--gray-300);
+			border-bottom:1px solid var(--gray-200);
 			li {
 				position:relative;
 				& ~ li {
