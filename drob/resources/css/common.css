@@ -112,7 +112,7 @@
 }
 .tits2 {
 	margin-bottom:1.2rem;
-	padding-bottom:.4rem;
+	padding-bottom:.8rem;
 	border-bottom:1px solid var(--gray-200);
 	.tit {
 		h3 {
@@ -403,7 +403,7 @@ a[class^="btn-outline"] {
 		}
 	}
 	&.type2 {
-		margin-bottom:1.3rem;
+		margin-bottom:1.7rem;
 		ul {
 			display:flex;
 			border-bottom:1px solid var(--gray-300);
