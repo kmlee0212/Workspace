@@ -743,7 +743,7 @@ input:disabled + .label {
 		justify-content:flex-end;
 		position:absolute;
 		right:0;
-		bottom:.5rem;
+		bottom:.7rem;
 		margin-top:.8rem;
 		.inner {
 			display:flex;
