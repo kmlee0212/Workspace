@@ -551,14 +551,14 @@ textarea:where(:read-only, :disabled) {
 	color:#888 !important;
 }
 
-input:hover,
-select:hover,
-textarea:hover {
+input:not(:read-only, :disabled):hover,
+select:not(:read-only, :disabled):hover,
+textarea:not(:read-only, :disabled):hover {
 	border-color:var(--gray-400);
 }
-input:focus,
-select:focus,
-textarea:focus {
+input:not(:read-only, :disabled):focus,
+select:not(:read-only, :disabled):focus,
+textarea:not(:read-only, :disabled):focus {
 	border-color:var(--blue-600);
 	background-color:var(--blue-100);
 }
