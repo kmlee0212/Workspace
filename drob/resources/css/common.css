@@ -895,14 +895,14 @@ input:disabled + .label {
 	position:relative;
 	padding:1.6rem 1.8rem;
 	border-radius:.6rem;
-	border:1px solid var(--gray-200);
+	border:.3rem solid var(--gray-100);
 	/* box-shadow: 0 4px 12px rgba(0,0,0,0.05) !important;
 	transition:all .3s; */
 	&:hover {
 		/* border-color:var(--gray-300); */
 	}
 	&.flex2 {
-		flex:2.12;
+		flex:2.15;
 	}
 }
 
