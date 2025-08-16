@@ -403,7 +403,7 @@ a[class^="btn-outline"] {
 		}
 	}
 	&.type2 {
-		margin-bottom:1.7rem;
+		margin-bottom:1.3rem;
 		ul {
 			display:flex;
 			border-bottom:1px solid var(--gray-200);
@@ -415,7 +415,7 @@ a[class^="btn-outline"] {
 				button {
 					display:flex;
 					align-items:center;
-					height:2.9rem;
+					height:3.3rem;
 					padding:0 1.6rem .3rem;
 					font-size:1.6rem;
 					color:var(--gray-400);
