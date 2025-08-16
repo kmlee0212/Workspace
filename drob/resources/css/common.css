@@ -112,6 +112,8 @@
 }
 .tits2 {
 	margin-bottom:1.2rem;
+	padding-bottom:.4rem;
+	border-bottom:1px solid var(--gray-200);
 	.tit {
 		h3 {
 			font-size:1.7rem;
@@ -401,7 +403,7 @@ a[class^="btn-outline"] {
 		}
 	}
 	&.type2 {
-		margin-bottom:.7rem;
+		margin-bottom:1.3rem;
 		ul {
 			display:flex;
 			border-bottom:1px solid var(--gray-300);
