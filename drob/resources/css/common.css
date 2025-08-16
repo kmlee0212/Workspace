@@ -695,13 +695,14 @@ input:disabled + .label {
 }
 
 .search-box {
+	position:relative;
 	margin-bottom:2.4rem;
 	table {
 		border-left:hidden;
 		border-right:hidden;
 		th,
 		td {
-			padding:.5rem .8rem;
+			height:4.5rem;
 			border:solid var(--gray-200);
 			border-width:1px 0 1px 1px;
 			font-size:1.4rem;
@@ -709,6 +710,7 @@ input:disabled + .label {
 			text-align:left;
 		}
 		th {
+			padding:.2rem .8rem;
 			background-color:var(--gray-50);
 			font-weight:700;
 			color:var(--gray-600);
@@ -723,11 +725,25 @@ input:disabled + .label {
 				}
 			}
 		}
+		td {
+			padding:.5rem .8rem;
+			& + td {
+				border-left:0;
+			}
+		}
+		tr:last-child {
+			td:last-child {
+				width:18rem;
+			}
+		}
 	}
 	.btn {
 		display:flex;
 		align-items:center;
 		justify-content:flex-end;
+		position:absolute;
+		right:0;
+		bottom:.5rem;
 		margin-top:.8rem;
 		.inner {
 			display:flex;
