@@ -902,7 +902,7 @@ input:disabled + .label {
 		/* border-color:var(--gray-300); */
 	}
 	&.flex2 {
-		flex:2.15;
+		flex:2.13;
 	}
 }
 
