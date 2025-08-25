@@ -37,20 +37,24 @@
 				align-items:center;
 				position:relative;
 				width:21rem;
-				margin-right:.8rem;
 				form {
+					overflow:hidden;
 					width:100%;
+					border-radius:.5rem;
 				}
 				input {
 					flex:1;
 					padding-right:3.4rem;
+					&:focus {
+						border:0 !important;
+					}
 				}
 				button {
 					position:absolute;
 					right:0;
 					top:0;
 					width:3.4rem;
-					height:3.2rem;
+					height:3rem;
 					margin:1px;
 					border-left:1px solid #e8e8e8;
 					background:#fff url(../images/ico/ico_search_b.png) no-repeat 50%;

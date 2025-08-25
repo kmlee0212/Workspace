@@ -225,3 +225,17 @@
 		}
 	}
 }
+
+/* =======================
+	BOARD
+======================= */
+.board-wrap {
+	.flex-list {
+		> div {
+			&:first-child {
+				flex:none;
+				width:32rem;
+			}
+		}
+	}
+}

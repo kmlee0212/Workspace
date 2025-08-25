@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title> Drob </title>
+<link rel="stylesheet" href="./resources/css/import.css">
+<script src="./resources/js/libs/jquery.min.js"></script>
+</head>
+<body>
+<div class="page-content">
+	<div class="board-wrap">
+		<div class="flex-list">
+			<div class="cards">
+				<div class="tits2">
+					<div class="tit">
+						<h3>카테고리</h3>
+					</div>
+				</div>
+				<div class="search-list">
+					<form action="">
+						<input type="search">
+						<button type="button" class="btn-outline2 l"><span>검색</span></button>
+					</form>
+				</div>
+				<div>트리 영역</div>
+			</div>
+			<div class="content">
+				<div class="tits2">
+					<div class="tit">
+						<h3>공지사항</h3>
+					</div>
+				</div>
+				<!-- TABLE -->
+				<div class="summary-box">
+					<div class="left">
+						<div class="board-search">
+							<input type="text" placeholder="제목">
+							<button type="button" class="btn-outline1 m"><span>조회</span></button>
+						</div>
+					</div>
+					<div class="right">
+						<button type="button" class="btn-outline2 m ico-write"><span>글쓰기</span></button>
+					</div>
+				</div>
+				<div class="tables col">
+					<table>
+						<colgroup>
+							<col style="width:8rem">
+							<col style="">
+							<col style="width:14rem">
+							<col style="width:10rem">
+							<col style="width:10rem">
+							<col style="width:16rem">
+							<col style="width:20rem">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">NO</th>
+								<th scope="col">제목</th>
+								<th scope="col">첨부파일</th>
+								<th scope="col">조회수</th>
+								<th scope="col">댓글수</th>
+								<th scope="col">작성자</th>
+								<th scope="col">작성일</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>0</td>
+								<td class="al">
+									<a href="javascript:void(0)" class="txt-link ellipsis">테스트</a>
+								</td>
+								<td></td>
+								<td>0</td>
+								<td>0</td>
+								<td><span class="ellipsis">anonymouseanonymouse</span></td>
+								<td>2025-07-16 18:04:00</td>
+							</tr>
+							<tr>
+								<td colspan="7" class="no-data"><p>게시물이 없습니다.</p></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- //TABLE -->
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	/* select */
+	function selectbox() {
+		const $selectbox = $('.select-box');
+		const $spd = 200;
+		function selectboxClose() {
+			$selectbox.removeClass('on').find('.select-option').stop().slideUp($spd);
+			$selectbox.find('.select>button').attr('aria-expanded', false);
+		}
+	
+		$selectbox.each(function() {
+			const $loadTxt = $(this).find('li.selected button').html();
+			$(this).find('.select>button em').html($loadTxt);
+	
+			//select click function
+			$(this).find('.select>button').on('click', function() {
+				if (!$(this).parents('.select-box').hasClass('on')) {
+					selectboxClose();
+					$(this).next().find('.selected').attr('aria-selected', true);
+					$(this).parents('.select-box').addClass('on').find('.select-option').stop().slideDown($spd);
+					$(this).next().focus();
+					$(this).attr('aria-expanded', true);
+				} else {
+					selectboxClose();
+				}
+			});
+	
+			//option click function
+			$(this).find('li button').on('click', function() {
+				const $this = $(this);
+				const $thisTxt = $this.html();
+				$this.parent().addClass('selected').attr('aria-selected', true);
+				$this.parent().siblings().removeClass('selected').removeAttr('aria-selected');
+				$this.parents('.select').find('> button em').html($thisTxt);
+				$this.parents('.select').find('> button').focus();
+				selectboxClose();
+			});
+	
+			//key check function
+			$(this).find('.select>button').on('keydown', function(e) {
+				if (e.keyCode === 9 && e.shiftKey) {
+					selectboxClose();
+				}
+			});
+			$(this).find('li:last-child button').on('keydown', function(e) {
+				if (e.keyCode === 9 && e.shiftKey) {
+				} else if (e.keyCode === 9) {
+					selectboxClose();
+				}
+			});
+		});
+	
+		$(document).mouseup(function(e) {
+			const $el = $('.select-box');
+			if (!$el.is(e.target) && $el.has(e.target).length == 0) {
+				selectboxClose();
+			}
+		});
+	} selectbox();
+</script>
+</body>
+</html>

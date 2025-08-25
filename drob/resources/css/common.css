@@ -131,6 +131,10 @@
 	color:#666;
 }
 
+.ellipsis {
+	display:inline-block;overflow:hidden;max-width:90%;text-overflow:ellipsis;white-space:nowrap;vertical-align:top;
+}
+
 /* BUTTON */
 .btns.full {
 	display:block;
@@ -326,6 +330,11 @@ a[class^="btn-outline"] {
 			background-image:url(../images/ico/ico_delete_b.png);
 		}
 	}
+	&.ico-write {
+		span::before {
+			background-image:url(../images/ico/ico_write_b.png);
+		}
+	}
 }
 
 .btn-more {
@@ -448,6 +457,13 @@ a[class^="btn-outline"] {
 	}
 }
 
+.txt-link {
+	color:var(--blue-600);
+	text-decoration:underline;
+	text-underline-position:under;
+}
+
+
 /* LIST */
 
 
@@ -515,7 +531,7 @@ textarea {
 	width:100%;
 	padding:0 .8rem;
 	border:1px solid var(--gray-200);
-	border-radius:.2rem;
+	border-radius:.5rem;
 	background-color:#fff;
 	font-size:1.4rem;
 	color:#333;
@@ -523,7 +539,7 @@ textarea {
 }
 input:where([type="text"], [type="password"], [type="search"]),
 select {
-	height:3.4rem;
+	height:3.2rem;
 }
 input[type="password"]:not(:placeholder-shown){
 	font-family:auto;
@@ -579,7 +595,7 @@ textarea:where(:read-only, :disabled) {
 			height:3.2rem;
 			padding:0 2.4rem 0 .8rem;
 			border:1px solid var(--gray-200);
-			border-radius:.2rem;
+			border-radius:.5rem;
 			background:#fff url(../images/common/form_select_b.png) no-repeat right .8rem center;
 			background-size:.8rem;
 			font-size:1.4rem;
@@ -594,13 +610,14 @@ textarea:where(:read-only, :disabled) {
 		}
 		.select-option {
 			display:none;
+			overflow:hidden;
 			position:absolute;
 			left:0;
 			right:0;
 			top:3.2rem;
 			z-index:2;
 			border:1px solid var(--gray-300);
-			border-radius:.2rem;
+			border-radius:.5rem;
 			background-color:#fff;
 			.search {
 				border-bottom:1px solid var(--gray-200);
@@ -755,6 +772,15 @@ input:disabled + .label {
 	}
 }
 
+.board-search {
+	float:right;
+	display:flex;
+	gap:.4rem;
+	input {
+		width:20rem;
+	}
+}
+
 /* PROGRESS */
 .progress {
 	margin-top:.8rem;
@@ -804,7 +830,11 @@ input:disabled + .label {
 }
 
 /* BOARD */
-
+.summary-box {
+	display:flex;
+	justify-content:space-between;
+	margin-bottom:1.2rem;
+}
 
 /* BOX */
 
