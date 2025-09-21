@@ -804,9 +804,15 @@ input:disabled + .label {
 		align-items:center;
 		justify-content:space-between;
 		margin-top:.4rem;
-		font-size:1.3rem;
+		font-size:1.4rem;
 		.muted {
 			color:#666;
+			em {
+				color:#999;
+				&:first-child {
+					font-weight:600;
+				}
+			}
 		}
 	}
 	&.type2 {
