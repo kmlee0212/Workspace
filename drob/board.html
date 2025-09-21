@@ -85,6 +85,43 @@
 					</table>
 				</div>
 				<!-- //TABLE -->
+				<div class="paginate">
+					<div class="view">
+						<span class="label">페이지 크기</span>
+						<!-- SELECT -->
+						<div class="select-box">
+							<div class="label" id="sel-id1">셀렉트 선택</div>
+							<div class="select">
+								<button type="button" aria-haspopup="true" aria-expanded="false" id="selBtn-id1" aria-labelledby="sel-id1"><em></em></button>
+								<div class="select-option">
+									<ul role="listbox" tabindex="-1" aria-labelledby="selBtn-id1">
+										<li role="option" class="selected"><button type="button">10</button></li>
+										<li role="option"><button type="button">20</button></li>
+										<li role="option"><button type="button">30</button></li>
+										<li role="option"><button type="button">50</button></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- //SELECT -->
+					</div>
+					<div class="page">
+						<a href="#" class="control first disabled"><span class="blind">처음 페이지</span></a>
+						<a href="#" class="control prev disabled"><span class="blind">이전 페이지</span></a>
+						<a href="#" title="현재 페이지">1</a> <!-- [D] 활성화 시 a태그에만 title 속성 처리 -->
+						<a href="#">2</a>
+						<a href="#">3</a>
+						<a href="#">4</a>
+						<a href="#">5</a>
+						<a href="#">6</a>
+						<a href="#">7</a>
+						<a href="#">8</a>
+						<a href="#">9</a>
+						<a href="#">10</a>
+						<a href="#" class="control next"><span class="blind">다음 페이지</span></a>
+						<a href="#" class="control last"><span class="blind">마지막 페이지</span></a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
