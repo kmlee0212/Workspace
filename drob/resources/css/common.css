@@ -1105,7 +1105,7 @@ input:disabled + .label {
 	}
 	a:not(.control,
 	[title]):hover {
-		border:1px solid var(--gray-300);
+		border:1px solid var(--gray-200);
 	}
 	[title] {
 		border:1px solid var(--blue-600);
