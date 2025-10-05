@@ -40,7 +40,7 @@
 				form {
 					overflow:hidden;
 					width:100%;
-					border-radius:.5rem;
+					border-radius:.3rem;
 				}
 				input {
 					flex:1;
@@ -203,7 +203,7 @@
 						top:50%;
 						margin-top:-.2rem;
 						padding:.3rem;
-						border:solid var(--blue-100);
+						border:solid var(--blue-300);
 						border-width:0 .2rem .2rem 0;
 						transform:rotate(45deg);
 					}
@@ -214,8 +214,7 @@
 					button {
 						color:var(--white);
 						&::after {
-							border:solid var(--white);
-							border-width:0 .2rem .2rem 0;
+							border-color:var(--white);
 							transform:rotate(225deg);
 						}
 					}

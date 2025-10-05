@@ -168,7 +168,7 @@
 [class^="btn-solid"],
 [class^="btn-outline"] {
 	padding:0 .8rem;
-	border-radius:.5rem;
+	border-radius:.3rem;
 	text-align:center;
 	white-space:nowrap;
 	transition:all .3s;
@@ -531,7 +531,7 @@ textarea {
 	width:100%;
 	padding:0 .8rem;
 	border:1px solid var(--gray-200);
-	border-radius:.5rem;
+	border-radius:.3rem;
 	background-color:#fff;
 	font-size:1.4rem;
 	color:#333;
@@ -595,7 +595,7 @@ textarea:where(:read-only, :disabled) {
 			height:3.2rem;
 			padding:0 2.4rem 0 .8rem;
 			border:1px solid var(--gray-200);
-			border-radius:.5rem;
+			border-radius:.3rem;
 			background:#fff url(../images/common/form_select_b.png) no-repeat right .8rem center;
 			background-size:.8rem;
 			font-size:1.4rem;
@@ -617,7 +617,7 @@ textarea:where(:read-only, :disabled) {
 			top:3.2rem;
 			z-index:2;
 			border:1px solid var(--gray-300);
-			border-radius:.5rem;
+			border-radius:.3rem;
 			background-color:#fff;
 			.search {
 				border-bottom:1px solid var(--gray-200);
@@ -920,10 +920,10 @@ input:disabled + .label {
 		white-space:nowrap;
 		transition:all .3s;
 		&:first-child {
-			border-radius:.4rem 0 0 .4rem;
+			border-radius:.3rem 0 0 .3rem;
 		}
 		&:last-child {
-			border-radius:0 .4rem .4rem 0;
+			border-radius:0 .3rem .3rem 0;
 		}
 		&.on {
 			position:relative;
@@ -945,15 +945,16 @@ input:disabled + .label {
 .cards {
 	position:relative;
 	padding:1.6rem 1.8rem;
-	border-radius:.6rem;
-	border:.3rem solid var(--gray-100);
+	border-radius:.3rem;
+	/* border:.3rem solid var(--gray-100); */
+	box-shadow:0 0 10px rgba(0,0,0,.08);
 }
 
 .flex-list {
 	display:flex;
 	gap:2rem;
 	& ~ .flex-list {
-		margin-top:1.6rem;
+		margin-top:2rem;
 	}
 	> div {
 		flex:1;
@@ -1107,9 +1108,9 @@ input:disabled + .label {
 			margin-left:1rem;
 		}
 	}
-	a:not(.control,
-	[title]):hover {
-		border:1px solid var(--gray-200);
+	a:not(.control, [title]):hover {
+		border:1px solid var(--gray-100);
+		background-color:var(--gray-100);
 	}
 	[title] {
 		border:1px solid var(--blue-600);
